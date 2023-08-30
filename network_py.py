@@ -49,7 +49,7 @@ def main():
             if ask == 'y':
                 with open('open_ports.txt', 'a') as f:
                     f.write("------------------------\n")
-                    f.write(f" Scaned: {ip}\n")
+                    f.write(f" Scanned: {ip}\n")
                     f.write(" Open Ports: ")
                     for port in ports:
                         f.write(f"{port} ")
