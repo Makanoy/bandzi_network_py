@@ -17,7 +17,7 @@ hostname = socket.gethostname()
 user_ip = socket.gethostbyname(hostname)
 
 if os.getuid() != 0:
-    exit("you need to run code with sudo!")
+    exit("You must run the code with sudo!")
 
 def printBanner():
     os.system("clear")
@@ -62,7 +62,7 @@ def main():
             print(f"       {cyan}IP\t\t   MAC Address\n{white}-------------------------------------------")
             for element in answer_list:
                 print("  " + element[1].psrc + "\t\t" + element[1].hwdst)
-            ask = input(f"\n\n{white}[{cyan}?{white}] Do you want to save open ports?: {cyan}Y{white}/{cyan}N{white}: ").lower()
+            ask = input(f"\n\n{white}[{cyan}?{white}] Do you want to save?: {cyan}Y{white}/{cyan}N{white}: ").lower()
             if ask == 'y':
                 with open('scaned_host.txt', 'a') as f:
                     f.write("-------------------------------------------\n")
